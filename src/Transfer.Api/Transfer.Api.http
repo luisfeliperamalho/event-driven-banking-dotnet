@@ -1,6 +1,31 @@
 @Transfer.Api_HostAddress = http://localhost:5048
 
-GET {{Transfer.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+### Valid transfer
+POST {{Transfer.Api_HostAddress}}/transfers
+Content-Type: application/json
 
-###
+{
+  "sourceAccountId": "A1",
+  "targetAccountId": "B2",
+  "amount": 100.00
+}
+
+### Amount zero (invalid)
+POST {{Transfer.Api_HostAddress}}/transfers
+Content-Type: application/json
+
+{
+  "sourceAccountId": "A1",
+  "targetAccountId": "B2",
+  "amount": 0
+}
+
+### Same account (invalid)
+POST {{Transfer.Api_HostAddress}}/transfers
+Content-Type: application/json
+
+{
+  "sourceAccountId": "A1",
+  "targetAccountId": "A1",
+  "amount": 50.00
+}

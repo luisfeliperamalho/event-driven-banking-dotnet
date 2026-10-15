@@ -5,4 +5,9 @@
     <Project Path="src/Ledger.Service/Ledger.Service.csproj" />
     <Project Path="src/Transfer.Api/Transfer.Api.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Fraud.Service.Tests/Fraud.Service.Tests.csproj" />
+    <Project Path="tests/Ledger.Service.Tests/Ledger.Service.Tests.csproj" />
+    <Project Path="tests/Transfer.Api.Tests/Transfer.Api.Tests.csproj" />
+  </Folder>
 </Solution>
